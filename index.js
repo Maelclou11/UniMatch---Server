@@ -21,7 +21,7 @@ const apiRoot = '/api';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: 'http://localhost:3000'  // URL du frontend
+    origin: '*'  // URL du frontend
 }));
 app.options('*', cors());
 app.use('/images', express.static(path.join(__dirname,'images')));

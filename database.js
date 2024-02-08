@@ -1,11 +1,10 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-  host: process.env.DB_HOST,
+const sequelize = new Sequelize("heroku_87676e5496b8cda", "b11ce13101e615", "5259a87c", {
+  host: "us-cluster-east-01.k8s.cleardb.net",
   dialect: 'mysql',
 });
-
 module.exports = sequelize;
 
 // Si l'on veux voir si le résultat de la connexion 
